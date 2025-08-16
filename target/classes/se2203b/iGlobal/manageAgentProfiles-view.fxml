@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="se2203b.iGlobal.ManageAgentProfilesController"
+            prefHeight="400" prefWidth="950" style="-fx-background-color: #eeeeee;">
+    <children>
+        <Label text="Manage Agent Profiles"
+               layoutX="20.0" layoutY="20.0" prefWidth="400.0">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+
+        <Button fx:id="addAgentBtn"
+                text="Add New Agent"
+                layoutX="780" layoutY="20" prefWidth="130.0"
+                onAction="#openAddAgentWindow"/>
+
+        <TableView fx:id="agentTable"
+                   layoutX="20" layoutY="60"
+                   prefWidth="900" prefHeight="260">
+            <columns>
+                <TableColumn fx:id="firstNameCol" text="First Name" prefWidth="100"/>
+                <TableColumn fx:id="lastNameCol" text="Last Name" prefWidth="100"/>
+                <TableColumn fx:id="emailCol" text="Email Address" prefWidth="160"/>
+                <TableColumn fx:id="phoneCol" text="Phone Number" prefWidth="120"/>
+                <TableColumn fx:id="licenseCol" text="License Number" prefWidth="120"/>
+                <TableColumn fx:id="specializationCol" text="Specialization" prefWidth="120"/>
+            </columns>
+        </TableView>
+
+        <Button fx:id="removeBtn" text="Remove" textFill="#d10303"
+                layoutX="20" layoutY="335" onAction="#removeAgent"/>
+        <Button fx:id="exitBtn" text="Exit" layoutX="860" layoutY="335"
+                onAction="#exit"/>
+    </children>
+</AnchorPane>

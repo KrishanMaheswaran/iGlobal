@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="se2203b.iGlobal.AddNewAdministratorController"
+            prefHeight="300" prefWidth="400" style="-fx-background-color: #eeeeee;">
+    <children>
+        <VBox spacing="10" layoutX="20" layoutY="20">
+            <children>
+                <Label text="Add New Administrator" style="-fx-font-weight: bold; -fx-font-size: 16"/>
+                <GridPane hgap="10" vgap="10">
+                    <children>
+                        <Label text="First Name:" GridPane.rowIndex="0"/>
+                        <TextField fx:id="firstNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Last Name:" GridPane.rowIndex="1"/>
+                        <TextField fx:id="lastNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Email Address:" GridPane.rowIndex="2"/>
+                        <TextField fx:id="emailField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <Label text="Phone Number:" GridPane.rowIndex="3"/>
+                        <TextField fx:id="phoneField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <Label text="Date Hired:" GridPane.rowIndex="4"/>
+                        <DatePicker fx:id="dateCreatedPicker" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                    </children>
+                </GridPane>
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="cancelBtn" text="Cancel" onAction="#cancel"/>
+                        <Button fx:id="saveBtn" text="Save" onAction="#saveAdministrator"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

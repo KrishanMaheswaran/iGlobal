@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="se2203b.iGlobal.ManagePropertyRecordsController"
+            prefHeight="400" prefWidth="950" style="-fx-background-color: #eeeeee;">
+    <children>
+        <Label text="Manage Property Records"
+               layoutX="20.0" layoutY="20.0" prefWidth="400.0">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+        <Button fx:id="addNewPropertyBtn"
+                text="Add New Property"
+                layoutX="780" layoutY="20" prefWidth="130.0"
+                onAction="#openAddNewPropertyWindow"/>
+        <TableView fx:id="propertyTable"
+                   layoutX="20" layoutY="60"
+                   prefWidth="900" prefHeight="260">
+            <columns>
+                <!-- The fx:id "typeCol" is used for the property type column -->
+                <TableColumn fx:id="typeCol" text="Property Type" prefWidth="90"/>
+                <TableColumn fx:id="lotSizeCol" text="Lot Size" prefWidth="70"/>
+                <TableColumn fx:id="squareFootageCol" text="S. Footage" prefWidth="90"/>
+                <TableColumn fx:id="bedroomsCol" text="Bedrooms" prefWidth="70"/>
+                <TableColumn fx:id="bathroomsCol" text="Bathrooms" prefWidth="80"/>
+                <TableColumn fx:id="yearBuiltCol" text="Year" prefWidth="60"/>
+                <TableColumn fx:id="priceCol" text="Price" prefWidth="80"/>
+                <TableColumn fx:id="provinceCol" text="Province" prefWidth="80"/>
+                <TableColumn fx:id="cityCol" text="City" prefWidth="80"/>
+                <TableColumn fx:id="addressCol" text="Address" prefWidth="150"/>
+                <TableColumn fx:id="postalCodeCol" text="Postal Code" prefWidth="90"/>
+            </columns>
+        </TableView>
+        <Button fx:id="removeBtn" text="Remove" textFill="#d10303"
+                layoutX="20" layoutY="335" onAction="#removeSelectedRecord"/>
+        <Button fx:id="exitBtn" text="Exit" layoutX="860" layoutY="335"
+                onAction="#closeWindow"/>
+    </children>
+</AnchorPane>

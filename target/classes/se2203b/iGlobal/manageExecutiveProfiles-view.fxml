@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="se2203b.iGlobal.ManageExecutiveProfilesController"
+            prefHeight="400" prefWidth="600" style="-fx-background-color: #eeeeee;">
+    <children>
+        <Label text="Manage Executive Profiles"
+               layoutX="20" layoutY="20" prefWidth="400">
+            <font>
+                <Font name="System Bold" size="16"/>
+            </font>
+        </Label>
+
+        <Button fx:id="addExecutiveBtn"
+                text="Add New Executive"
+                layoutX="430" layoutY="20" prefWidth="130"
+                onAction="#openAddExecutiveWindow"/>
+
+        <TableView fx:id="executiveTable"
+                   layoutX="20" layoutY="60"
+                   prefWidth="540" prefHeight="260">
+            <columns>
+                <TableColumn fx:id="firstNameCol" text="First Name" prefWidth="100"/>
+                <TableColumn fx:id="lastNameCol" text="Last Name" prefWidth="100"/>
+                <TableColumn fx:id="emailCol" text="Email Address" prefWidth="140"/>
+                <TableColumn fx:id="phoneCol" text="Phone Number" prefWidth="100"/>
+                <TableColumn fx:id="privatePhoneCol" text="Private Phone Number" prefWidth="120"/>
+            </columns>
+        </TableView>
+
+        <Button fx:id="removeBtn" text="Remove" textFill="#d10303"
+                layoutX="20" layoutY="335" onAction="#removeExecutive"/>
+        <Button fx:id="exitBtn" text="Exit" layoutX="500" layoutY="335"
+                onAction="#exit"/>
+    </children>
+</AnchorPane>

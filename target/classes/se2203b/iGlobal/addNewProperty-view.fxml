@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="se2203b.iGlobal.AddNewPropertyController"
+            prefHeight="550" prefWidth="420">
+    <children>
+        <VBox spacing="10.0" layoutX="20" layoutY="20">
+            <children>
+                <Label text="Add New Property Record" style="-fx-font-weight: bold; -fx-font-size: 16"/>
+                <GridPane hgap="10" vgap="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="100" halignment="RIGHT"/>
+                        <ColumnConstraints minWidth="250"/>
+                    </columnConstraints>
+                    <children>
+                        <!-- Row 0: Property Type -->
+                        <Label text="Property Type:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="propertyTypeCB" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <!-- Row 1: Address -->
+                        <Label text="Address:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="addressField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <!-- Row 2: Postal Code -->
+                        <Label text="Postal Code:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="postalField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <!-- Row 3: Province -->
+                        <Label text="Province:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="provinceCB" GridPane.rowIndex="3" GridPane.columnIndex="1" editable="true"/>
+
+                        <!-- Row 4: City -->
+                        <Label text="City:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="cityCB" GridPane.rowIndex="4" GridPane.columnIndex="1" editable="true"/>
+
+                        <!-- Row 5: Lot Size -->
+                        <Label text="Lot Size:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <TextField fx:id="lotSizeField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                        <!-- Row 6: Square Footage -->
+                        <Label text="Square Footage:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                        <TextField fx:id="squareFootField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                        <!-- Row 7: Bedrooms -->
+                        <Label text="Bedrooms:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                        <TextField fx:id="bedroomField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                        <!-- Row 8: Bathrooms -->
+                        <Label text="Bathrooms:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                        <TextField fx:id="bathroomField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                        <!-- Row 9: Year Built -->
+                        <Label text="Year Built:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+                        <TextField fx:id="yearBuiltField" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+                        <!-- Row 10: Amenities -->
+                        <Label text="Amenities:" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+                        <TextField fx:id="amenitiesField" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+                        <!-- Row 11: Price -->
+                        <Label text="Price:" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+                        <TextField fx:id="priceField" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+
+                        <!-- Row 12: Description -->
+                        <Label text="Description:" GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+                        <TextArea fx:id="descriptionField" GridPane.rowIndex="12" GridPane.columnIndex="1"
+                                  prefRowCount="3" wrapText="true"/>
+                    </children>
+                </GridPane>
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button fx:id="cancelBtn" text="Cancel" onAction="#cancel"/>
+                        <Button fx:id="saveBtn" text="Save" onAction="#saveProperty"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
